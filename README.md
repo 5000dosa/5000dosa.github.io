@@ -2,55 +2,15 @@
 
 안녕하세요!^^
 비트캠프 교육생입니다.
-centos5입니다. 
 
-2.1 헤더Headers 
-큰제목: 문서 제목
-This is an H1
-=============
+centos5확인용입니다. 
 
-작은제목: 문서 부제목
-This is an H2
--------------
-글머리:1~6까지만 지원
-# This is a H1
-## This is a H2
-### This is a H3
-#### This is a H4
-##### This is a H5
-###### This i a H6
+![NCA NCP수료](https://user-images.githubusercontent.com/118055665/202892429-e0434d33-d3c3-4f66-bdb3-8e312133100c.PNG)
 
-2.2 BlockQuote
-> This is a first blockqute.
->> This is a second blokqute.
->>> This is a third blockqute.
-응용
-> # THis is aH3 
->> * List
+![클라우드인프라강의](https://user-images.githubusercontent.com/118055665/202892433-41b8fac3-5850-44bd-9e80-aec5a0fcdc18.PNG)
 
-2.3 목록
-* # 순서있는 목록
-1. 첫번째
-2. 세번째
-3. 두번째 
-어떤번호를 입력해도 순서는 내리차순으로 정의된다.
-* # 순서없는 목록
+1주차까지 강의를 듣고
 
-* 빨강 
-  * 녹색
-    * 파랑 
+2주차에 깃허브 사용법과 readme.md으로 깃허브 블로그를 만들었습니다.
 
-+ 빨강
-  + 녹색
-    + 파랑
 
-- 빨강 
-  - 녹색
-    - 파랑 
-
-응용
-<span style="color: red">빨강</span>
-<span style="color: #0000FF">파란</span>
-
-응용2 형광펜
-<span style="background-color: #fff5b1">노란형관형펜</span>
