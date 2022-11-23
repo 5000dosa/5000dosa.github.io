@@ -50,6 +50,13 @@ This is an H2
 응용
 <span style="color: red">빨강</span>
 <span style="color: #0000FF">파란</span>
+<span style="color: #008000">초록</span>
+<span style="color: #2D3748; background-color:#fff5b1;"> Strong</span>
+
 
 응용2 형광펜
-<span style="background-color: #fff5b1">노란형관형펜</span>
+<span style="background-color: #fff5b1">노란형광펜</span>
+<span style="background-color:#f6f8fa">회색형광펜</span>
+<span style="background-color:#f1f8ff">파랑형광펜</span>
+<span style="background-color:#ffdce0">빨강형광펜</span>
+
