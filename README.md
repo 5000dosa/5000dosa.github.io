@@ -1,41 +1,34 @@
 # 5000DOSA 블로그
-<!doctype html>
- <html lang="ko">
-  <head>
-    <h1>체크박스를 클릭해보세요</h1>
-    <meta charset="utf-8">
-    <title>CSS</title>
-    <style>
-      .jb {
-        margin: 10px 0px;
-        width: 100px;
-        height: 100px;
-        background-color: orange;
-      }
-      @keyframes run {
-        from {
-          width: 100px;
-        }
-        to {
-          width: 100%;
-        }
-      }
-      .jb1 {
-        animation-name: run;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-play-state: paused;
-      }
-      input:checked + div {
-        animation-play-state: running;
-      }
-    </style>
-  </head>
-  <body>
-    <input type="checkbox">
-    <div class="jb jb1"></div>
-  </body>
+
+<h1>체크박스를 클릭해보세요</h1>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>CSS</title>
+		<style>
+			.jb {
+				box-sizing: border-box;
+				width: 64px;
+				height: 64px;
+				margin: 10px 0px;
+				background-color: orange;
+				border-radius: 100%;
+				transition: all ease 2s 0s;
+			}
+			input:checked ~ .jb {
+				width: 100%;
+				height: 200px;
+				border-radius: 0;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox">
+		<div class="jb"></div>
+	</body>
 </html>
+
 
 <br><br><br><br>
 
