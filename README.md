@@ -1,146 +1,36 @@
-# 5000DOSA 블로그
+diablo-js
+=========
 
-<h1>체크박스를 클릭해보세요</h1>
-<html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<title>CSS</title>
-		<style>
-			.jb {
-				box-sizing: border-box;
-				width: 64px;
-				height: 64px;
-				margin: 10px 0px;
-				background-color: orange;
-				border-radius: 100%;
-				transition: all ease 2s 0s;
-			}
-			input:checked ~ .jb {
-				width: 100%;
-				height: 200px;
-				border-radius: 0;
-				background-color: red;
-			}
-		</style>
-	</head>
-	<body>
-		<input type="checkbox">
-		<div class="jb"></div>
-	</body>
-</html>
+Isometric minimal-code style game at html5 canvas and javascript
+
+Demo
+----
+
+http://mitallast.github.com/diablo-js/
+
+CHANGELOG
+---------
+
+- Big update! Extracted one original level from Diablo 2
+- Use [tab] to show map
+- New map layers - walls, floors, objects
+- Tools for extract levels, pictures and another resources from origin Diablo 2 files
 
 
-<br><br><br><br>
+Useful tools
+------------
 
-<html lang="ko">
-  <head>
-    <h1>미니언즈는 바나나를 좋아합니다</h1>
-    <meta charset="utf-8">
-    <title>CSS</title>
-    <style>
-      body {
-        box-sizing: border-box;
-        font-family: Consolas, monospace;
-      }
-      h1 {
-        text-align: center;
-      }
-      img {
-        max-width: 100%;
-      }
-      .jb-a {
-        width: 400px;
-        margin: 0px auto;
-        position: relative
-      }
-      .jb-c {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        display: none;
-      }
-      .jb-a:hover .jb-c {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    
-    <div class="jb-a">
-      <img src="banana-g6d3f2053f_1280.jpg" alt="" class="jb-b">
-      <img src="minions-g72be53c35_1280.jpg" alt="" class="jb-c">
-    </div>
-  </body>
-</html>
+Tool for extract original diablo resources:
+https://github.com/mitallast/diablo-js/tree/master/dttool
 
-<br><br><br><br>
+Tool for calculate and transform primitive shadow for extracted monster & hero tiles:
+https://github.com/mitallast/diablo-js/tree/master/shadowmaker
+Builded shadowmaker
+https://github.com/mitallast/diablo-js/blob/master/shadowmaker.jar
 
+Some shell scripts for batch update images:
+https://github.com/mitallast/diablo-js/blob/master/monsters/make.sh
+https://github.com/mitallast/diablo-js/blob/master/monsters/rename.sh
 
-<div class="container">
-    <div>
-      <h1>막대기를 클릭해보세요</h1>
-      <div class="wrapper transition">
-        <span class="stick"></span>
-        <span class="stick"></span>
-        <span class="stick"></span>
-      </div>
-    </div>
-    <div>  
-      <p></p>
-      <div class="wrapper animation">
-        <span class="stick"></span>
-        <span class="stick"></span>
-        <span class="stick"></span>
-      </div>
-    </div>
-    <div>
-      <p></p>
-      <div class="wrapper svg">
-        <svg viewBox="0 0 130 108" xmlns="http://www.w3.org/2000/svg" version="1.1">
-          <rect width="120" height="20" rx="4" >
-            <animate dur="0.3s" begin="toggle.begin" attributeName="width" values="120; 136" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;" />
-            <animateTransform dur="0.3s" begin="toggle.begin" attributeName="transform" type="rotate" values="0 10 20;45 10 20" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;" />
-            <animate dur="0.3s" begin="reverseToggle.begin" attributeName="width" values="136; 120" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;"/>
-            <animateTransform dur="0.3s" begin="reverseToggle.begin" attributeName="transform" type="rotate" values="45 10 20; 0 10 20" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;"/>
-          </rect>
-          <rect y="44" width="120" height="20" rx="4" style="transform-origin: 50%" >
-            <animateTransform dur="0.3s" begin="toggle.begin" attributeName="transform" type="scale" values="1; 0.1" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;"/>
-            <animateTransform dur="0.3s" begin="reverseToggle.begin" attributeName="transform" type="scale" values="0.1; 1" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;"/>
-          </rect>
-          <rect y="88" width="120" height="20" rx="4">
-            <animate dur="0.3s" begin="toggle.begin" attributeName="width" values="120; 136" fill="freeze" />
-            <animateTransform dur="0.3s" begin="toggle.begin" attributeName="transform" type="rotate" values="0 10 88; -45 10 88" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;"/>
-            <animate dur="0.3s" begin="reverseToggle.begin" attributeName="width" values="136; 120" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;"/>
-            <animateTransform dur="0.3s" begin="reverseToggle.begin" attributeName="transform" type="rotate" values="-45 10 88; 0 10 88" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1;" />
-          </rect>
-  
-          <rect width="120" height="108" fill-opacity="0">
-            <animate dur="0.01s" attributeName="width" values="120; 0" fill="freeze" id="toggle" begin="click" />
-            <animate dur="0.01s" attributeName="width" values="0; 120" fill="freeze" begin="reverseToggle.end" />
-          </rect>
-          <rect width="0" height="108" fill-opacity="0">
-            <animate dur="0.001s" attributeName="width" values="120; 0" fill="freeze" id="reverseToggle" begin="click" />
-            <animate dur="0.001s" attributeName="width" values="0; 120" begin="toggle.end" fill="freeze"  />
-          </rect>
-        </svg>
-      </div>
-    </div>
-    <div>
-      
-      <div class="wrapper animation-api">
-        <span class="stick"></span>
-        <span class="stick"></span>
-        <span class="stick"></span>
-      </div>
-    </div>
-    <div>
-      
-      <div class="wrapper animation-api-next">
-        <span class="stick"></span>
-        <span class="stick"></span>
-        <span class="stick"></span>
-      </div>
-    </div>
-  </div>
-
- 
+More information you can find at original research from blizzhackers:
+http://www.blizzhackers.cc/viewtopic.php?f=182&t=370174&start=0
