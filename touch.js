@@ -55,10 +55,10 @@
 
 
     			// 좌표값 확인
-    			//var startX = $(this).scrollLeft(); //jquery 방식
-    			//var startY = $(this).scrollTop(); //jquery 방식
-    			var startX = evt.changedTouches[0].clientX;
-    			var startY = evt.changedTouches[0].clientY;
+    			var startX = $(this).scrollLeft(); //jquery 방식
+    			var startY = $(this).scrollTop(); //jquery 방식
+    			// var startX = evt.changedTouches[0].clientX;
+    			// var startY = evt.changedTouches[0].clientY;
     			console.log("[main] : [handleStart] : [X] : " + startX);
     			console.log("[main] : [handleStart] : [Y] : " + startY);
     			console.log("");
@@ -81,10 +81,10 @@
 
 
     			// 좌표값 확인
-    			// var moveX = $(this).scrollLeft(); //jquery 방식
-    			// var moveY = $(this).scrollTop(); //jquery 방식
-    			var moveX = evt.changedTouches[0].clientX;
-    			var moveY = evt.changedTouches[0].clientY;
+    			var moveX = $(this).scrollLeft(); //jquery 방식
+    			var moveY = $(this).scrollTop(); //jquery 방식
+    			// var moveX = evt.changedTouches[0].clientX;
+    			// var moveY = evt.changedTouches[0].clientY;
     			console.log("[main] : [handleMove] : [X] : " + moveX);
     			console.log("[main] : [handleMove] : [Y] : " + moveY);
     			console.log("");
