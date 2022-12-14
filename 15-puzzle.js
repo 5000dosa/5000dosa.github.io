@@ -1,8 +1,8 @@
 
 (function(){
 	
-	var state = 1;
-	var puzzle = document.getElementById('puzzle');
+	let state = 1;
+	let puzzle = document.getElementById('puzzle');
 
 	// Creates solved puzzle
 	solve();
@@ -32,10 +32,10 @@
 		
 		puzzle.innerHTML = '';
 		
-		var n = 1;
-		for(var i = 0; i <= 3; i++){
-			for(var j = 0; j <= 3; j++){
-				var cell = document.createElement('span');
+		let n = 1;
+		for(let i = 0; i <= 3; i++){
+			for(let j = 0; j <= 3; j++){
+				let cell = document.createElement('span');
 				cell.id = 'cell-'+i+'-'+j;
 				cell.style.left = (j*80+1*j+1)+'px';
 				cell.style.top = (i*80+1*i+1)+'px';
@@ -64,11 +64,11 @@
 		if(cell.clasName != 'empty'){
 			
 			// Tries to get empty adjacent cell
-			var emptyCell = getEmptyAdjacentCell(cell);
+			let emptyCell = getEmptyAdjacentCell(cell);
 			
 			if(emptyCell){
 				// Temporary data
-				var tmp = {style: cell.style.cssText, id: cell.id};
+				let tmp = {style: cell.style.cssText, id: cell.id};
 				
 				// Exchanges id and style values
 				cell.style.cssText = emptyCell.style.cssText;
@@ -112,10 +112,10 @@
 	function getEmptyAdjacentCell(cell){
 		
 		// Gets all adjacent cells
-		var adjacent = getAdjacentCells(cell);
+		let adjacent = getAdjacentCells(cell);
 		
 		// Searches for empty cell
-		for(var i = 0; i < adjacent.length; i++){
+		for(let i = 0; i < adjacent.length; i++){
 			if(adjacent[i].className == 'empty'){
 				return adjacent[i];
 			}
@@ -132,13 +132,13 @@
 	 */
 	function getAdjacentCells(cell){
 		
-		var id = cell.id.split('-');
+		let id = cell.id.split('-');
 		
 		// Gets cell position indexes
-		var row = parseInt(id[1]);
-		var col = parseInt(id[2]);
+		let row = parseInt(id[1]);
+		let col = parseInt(id[2]);
 		
-		var adjacent = [];
+		let adjacent = [];
 		
 		// Gets all possible adjacent cells
 		if(row < 3){adjacent.push(getCell(row+1, col));}			
@@ -161,10 +161,10 @@
 			return;
 		}
 	
-		var n = 1;
+		let n = 1;
 		// Goes through all cells and checks numbers
-		for(var i = 0; i <= 3; i++){
-			for(var j = 0; j <= 3; j++){
+		for(let i = 0; i <= 3; i++){
+			for(let j = 0; j <= 3; j++){
 				if(n <= 15 && getCell(i, j).innerHTML != n.toString()){
 					// Order is not correct
 					return;
@@ -193,13 +193,13 @@
 		puzzle.removeAttribute('class');
 		state = 0;
 		
-		var previousCell;
-		var i = 1;
-		var interval = setInterval(function(){
+		let previousCell;
+		let i = 1;
+		let interval = setInterval(function(){
 			if(i <= 100){
-				var adjacent = getAdjacentCells(getEmptyCell());
+				let adjacent = getAdjacentCells(getEmptyCell());
 				if(previousCell){
-					for(var j = adjacent.length-1; j >= 0; j--){
+					for(let j = adjacent.length-1; j >= 0; j--){
 						if(adjacent[j].innerHTML == previousCell.innerHTML){
 							adjacent.splice(j, 1);
 						}

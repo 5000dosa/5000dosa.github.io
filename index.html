@@ -3,21 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>✨ Fireworks in JavaScript</title>
+
+        <title>✨15 Puzzle in JavaScript</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+        <!-- <script
+        src="https://code.jquery.com/jquery-3.6.2.slim.min.js"
+        integrity="sha256-E3P3OaTZH+HlEM7f1gdAT3lHAn4nWBZXuYe89DFg2d0="
+        crossorigin="anonymous"> -->
+    </script>
+
         <canvas id="background"></canvas>
         <canvas id="firework"></canvas>
         <div id="puzzle"></div>
         <div id="controls">
-            <button id="solve">재시작</button>		
-            <button id="scramble">섞기</button>
+            <button id="solve">Reset</button>
+            <button id="scramble">Shuffle</button><br>
+            <button id="team">6팀:전서린,김다예레,이건형,안진수</button>
         </div>
-        <p id="myP">"Hello World".</p>
-        <p id="demo"></p>
         <script src="15-puzzle.js"></script>
         <script src="background.js"></script>
         <script src="firework.js"></script>
+        <script src="./touch.js"></script>
     </body>
 </html>

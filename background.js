@@ -61,18 +61,3 @@
     drawWizard();
     drawStars();
 })();
-
-(function(undefined) {
-
-    document.getElementById("myP").addEventListener("touchstart", myFunction);
-
-    function myFunction() {
-      document.getElementById("demo").innerHTML = "Hello World";
-    }
-
-    function myFunction(event) {
-        var x = event.touches[0].clientX;
-        var y = event.touches[0].clientY;
-        document.getElementById("demo").innerHTML = x + ", " + y;
-    }
-});
