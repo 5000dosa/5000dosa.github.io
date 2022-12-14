@@ -213,8 +213,7 @@
     }
 })();
 
-
-document.getElementById("myP").addEventListener("touchstart", myFunction);
+document.getElementById("myP").addEventListener("touchmove", myFunction);
 
 function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
