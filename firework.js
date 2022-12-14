@@ -212,3 +212,10 @@
         init();
     }
 })();
+
+
+document.getElementById("myP").addEventListener("touchstart", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
